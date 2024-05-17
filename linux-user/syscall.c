@@ -2079,7 +2079,7 @@ static abi_long do_setsockopt(int sockfd, int level, int optname,
         case IP_FREEBIND:
 #endif
         case IP_MULTICAST_IF:
-            if (optlen < sizeof(struct target_ip_mreq))
+            if (optlen >= sizeof(struct target_ip_mreq))
                 goto ip_mreq_case;
         case IP_MULTICAST_TTL:
         case IP_MULTICAST_LOOP:
