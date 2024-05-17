@@ -2095,7 +2095,7 @@ static abi_long do_setsockopt(int sockfd, int level, int optname,
             break;
         case IP_ADD_MEMBERSHIP:
         case IP_DROP_MEMBERSHIP:
-ip_mreq_case:
+        ip_mreq_case:
         {
             struct ip_mreqn ip_mreq;
             struct target_ip_mreqn *target_smreqn;
